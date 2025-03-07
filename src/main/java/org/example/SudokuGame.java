@@ -63,21 +63,21 @@ public class SudokuGame extends JFrame {
             }
         }
     }
-//
-//    private void checkSolution() {
-//        for (int row = 0; row < 9; row++) {
-//            for (int col = 0; col < 9; col++) {
-//                if (cells[row][col].isEditable()) {
-//                    String text = cells[row][col].getText();
-//                    if (text.isEmpty() || !text.matches("[1-9]")) {
-//                        JOptionPane.showMessageDialog(this, "Incorrect! Try again.");
-//                        return;
-//                    }
-//                }
-//            }
-//        }
-//        JOptionPane.showMessageDialog(this, "Congratulations! You solved it.");
-//    }
+
+    private void checkSolution() {
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                if (cells[row][col].isEditable()) {
+                    String text = cells[row][col].getText();
+                    if (text.isEmpty() || !text.matches("[1-9]")) {
+                        JOptionPane.showMessageDialog(this, "Incorrect! Try again.");
+                        return;
+                    }
+                }
+            }
+        }
+        JOptionPane.showMessageDialog(this, "Congratulations! You solved it.");
+    }
 //
 //    private void resetGame() {
 //        initializeBoard();
