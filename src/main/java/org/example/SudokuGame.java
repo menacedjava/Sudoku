@@ -34,35 +34,35 @@ public class SudokuGame extends JFrame {
         add(gridPanel, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
     }
-//
-//    private void initializeBoard() {
-//        Random rand = new Random();
-//        for (int row = 0; row < 9; row++) {
-//            for (int col = 0; col < 9; col++) {
-//                if (rand.nextInt(100) < 30) {
-//                    board[row][col] = rand.nextInt(9) + 1;
-//                } else {
-//                    board[row][col] = 0;
-//                }
-//            }
-//        }
-//    }
-//
-//    private void fillGrid(JPanel panel) {
-//        for (int row = 0; row < 9; row++) {
-//            for (int col = 0; col < 9; col++) {
-//                JTextField cell = new JTextField();
-//                cell.setHorizontalAlignment(JTextField.CENTER);
-//                if (board[row][col] != 0) {
-//                    cell.setText(String.valueOf(board[row][col]));
-//                    cell.setEditable(false);
-//                    cell.setBackground(Color.LIGHT_GRAY);
-//                }
-//                cells[row][col] = cell;
-//                panel.add(cell);
-//            }
-//        }
-//    }
+
+    private void initializeBoard() {
+        Random rand = new Random();
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                if (rand.nextInt(100) < 30) {
+                    board[row][col] = rand.nextInt(9) + 1;
+                } else {
+                    board[row][col] = 0;
+                }
+            }
+        }
+    }
+
+    private void fillGrid(JPanel panel) {
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                JTextField cell = new JTextField();
+                cell.setHorizontalAlignment(JTextField.CENTER);
+                if (board[row][col] != 0) {
+                    cell.setText(String.valueOf(board[row][col]));
+                    cell.setEditable(false);
+                    cell.setBackground(Color.LIGHT_GRAY);
+                }
+                cells[row][col] = cell;
+                panel.add(cell);
+            }
+        }
+    }
 //
 //    private void checkSolution() {
 //        for (int row = 0; row < 9; row++) {
