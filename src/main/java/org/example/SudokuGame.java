@@ -78,27 +78,27 @@ public class SudokuGame extends JFrame {
         }
         JOptionPane.showMessageDialog(this, "Congratulations! You solved it.");
     }
-//
-//    private void resetGame() {
-//        initializeBoard();
-//        for (int row = 0; row < 9; row++) {
-//            for (int col = 0; col < 9; col++) {
-//                if (board[row][col] != 0) {
-//                    cells[row][col].setText(String.valueOf(board[row][col]));
-//                    cells[row][col].setEditable(false);
-//                    cells[row][col].setBackground(Color.LIGHT_GRAY);
-//                } else {
-//                    cells[row][col].setText("");
-//                    cells[row][col].setEditable(true);
-//                    cells[row][col].setBackground(Color.WHITE);
-//                }
-//            }
-//        }
-//    }
-//
-//    public static void main(String[] args) {
-//        SwingUtilities.invokeLater(() -> {
-//            new SudokuGame().setVisible(true);
-//        });
-//    }
+
+    private void resetGame() {
+        initializeBoard();
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                if (board[row][col] != 0) {
+                    cells[row][col].setText(String.valueOf(board[row][col]));
+                    cells[row][col].setEditable(false);
+                    cells[row][col].setBackground(Color.LIGHT_GRAY);
+                } else {
+                    cells[row][col].setText("");
+                    cells[row][col].setEditable(true);
+                    cells[row][col].setBackground(Color.WHITE);
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new SudokuGame().setVisible(true);
+        });
+    }
 }
