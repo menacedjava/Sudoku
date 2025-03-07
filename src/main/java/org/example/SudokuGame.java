@@ -10,30 +10,30 @@ public class SudokuGame extends JFrame {
     private JTextField[][] cells = new JTextField[9][9];
     private JButton checkButton, resetButton;
 
-//    public SudokuGame() {
-//        setTitle("Sudoku");
-//        setSize(600, 600);
-//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        setLocationRelativeTo(null);
-//        setLayout(new BorderLayout());
-//
-//        JPanel gridPanel = new JPanel(new GridLayout(9, 9));
-//        initializeBoard();
-//        fillGrid(gridPanel);
-//
-//        JPanel buttonPanel = new JPanel();
-//        checkButton = new JButton("Check");
-//        resetButton = new JButton("Reset");
-//
-//        checkButton.addActionListener(e -> checkSolution());
-//        resetButton.addActionListener(e -> resetGame());
-//
-//        buttonPanel.add(checkButton);
-//        buttonPanel.add(resetButton);
-//
-//        add(gridPanel, BorderLayout.CENTER);
-//        add(buttonPanel, BorderLayout.SOUTH);
-//    }
+    public SudokuGame() {
+        setTitle("Sudoku");
+        setSize(600, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(new BorderLayout());
+
+        JPanel gridPanel = new JPanel(new GridLayout(9, 9));
+        initializeBoard();
+        fillGrid(gridPanel);
+
+        JPanel buttonPanel = new JPanel();
+        checkButton = new JButton("Check");
+        resetButton = new JButton("Reset");
+
+        checkButton.addActionListener(e -> checkSolution());
+        resetButton.addActionListener(e -> resetGame());
+
+        buttonPanel.add(checkButton);
+        buttonPanel.add(resetButton);
+
+        add(gridPanel, BorderLayout.CENTER);
+        add(buttonPanel, BorderLayout.SOUTH);
+    }
 //
 //    private void initializeBoard() {
 //        Random rand = new Random();
